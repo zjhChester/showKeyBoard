@@ -213,7 +213,9 @@ public class ShowFrame extends JFrame {
             public void nativeKeyPressed(NativeKeyEvent e) {
                 if (!ShowFrame.this.box.contains(String.valueOf(e.getKeyCode()))) {
                     ShowFrame.this.box.add(NativeKeyEvent.getKeyText(e.getKeyCode()));
-                    System.out.println(NativeKeyEvent.getKeyText(e.getKeyCode()));
+                    if("未知 keyCode: 0xe4a".equals(NativeKeyEvent.getKeyText(e.getKeyCode()))){
+                        ShowFrame.this.box.clear();
+                    }
                 }
                 showKey();
             }
