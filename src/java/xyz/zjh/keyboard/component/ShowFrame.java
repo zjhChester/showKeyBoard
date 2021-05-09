@@ -33,7 +33,7 @@ public class ShowFrame extends JFrame {
         this.showKeyboardText = new JTextField(10);
         this.showKeyboardText.setEnabled(false);
         this.showKeyboardText.setBounds(10, 10, 465, 50);
-        this.showKeyboardText.setText("111111111");
+        this.showKeyboardText.setText("按两下键盘试试呢~");
         this.showKeyboardText.setBackground(Color.black);
         this.showKeyboardText.setDisabledTextColor(Color.white);
         this.showKeyboardText.setFont(new Font("1", Font.BOLD, 13));
