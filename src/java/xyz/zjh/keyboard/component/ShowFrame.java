@@ -13,16 +13,16 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * @Classname ShowFrame
- * @Description TODO
+ * @Description 显示面板
  * @Date 2021/5/9 14:09
  * @Author zjhchester
  */
 public class ShowFrame extends JFrame {
     private List<JTextField> wordList = new ArrayList<>();
     private CopyOnWriteArrayList<String> box = new CopyOnWriteArrayList<>();
-
+    private MyPanel cat;
     private ShowFrame() throws HeadlessException {
-        super("键盘监听指令");
+        super("猫咪指令捕捉v3.0\t\t\t\t\t power by @zjhChester");
         initComponent();
         initSetting();
         addNativeKeyListener();
@@ -35,6 +35,8 @@ public class ShowFrame extends JFrame {
         setRow4();
         setRow5();
         setRow6();
+        cat = new MyPanel();
+        cat.setBounds(0,0,500,130);
     }
 
     private void setRow6() {
@@ -144,7 +146,7 @@ public class ShowFrame extends JFrame {
     private void setWordsByPositionAndName(int x,int y,int width,String name) {
         JTextField jTextField = new JTextField();
         jTextField.setEnabled(false);
-        jTextField.setBounds(x==0?0:(x*25)+10,y==0?0:(y*30)+10, width, 30);
+        jTextField.setBounds(x==0?0:(x*25)+10,y==0?30+100:((y+1)*30)+100, width, 30);
         jTextField.setBackground(Color.white);
         jTextField.setDisabledTextColor(Color.black);
         jTextField.setFont(new Font("楷体", Font.BOLD, 11));
@@ -155,7 +157,7 @@ public class ShowFrame extends JFrame {
     }
 
     private String fixTextIntoKeyBoard(String name) {
-        name ="Print Srceen".equals(name)?"PS":name;
+        name ="Print Screen".equals(name)?"PS":name;
         name ="Scroll Lock".equals(name)?"SL":name;
         name ="Pause".equals(name)?"PB":name;
         name ="Insert".equals(name)?"INS":name;
@@ -189,11 +191,13 @@ public class ShowFrame extends JFrame {
         for (JTextField jTextField : this.wordList) {
             contentPane.add(jTextField);
         }
+        contentPane.add(this.cat);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(500, 230);
+        setSize(500, 345);
         setVisible(true);
         setAlwaysOnTop(true);
         setLocationRelativeTo(null);
+        setResizable(false);
     }
 
     public static void start() {
@@ -218,6 +222,7 @@ public class ShowFrame extends JFrame {
                     }
                 }
                 showKey();
+
             }
 
             private void showKey() {
@@ -229,6 +234,7 @@ public class ShowFrame extends JFrame {
                         v.setDisabledTextColor(Color.BLACK);
                         v.setBackground(Color.WHITE);
                     }
+                    ShowFrame.this.cat.reloadImg();
                 });
             }
 
