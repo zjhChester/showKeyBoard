@@ -21,6 +21,6 @@
 ### 描述
 在`v2.0`的基础上，加入了图片，通过每次按压，重新绘制JPanel的背景图，达到猫咪点击的效果  
 ### 演示地址
-<a href="http://cdn.zjhwork.xyz/vsfileserver/2105101316846289848.mp4" target="_blank">敲击演示</a>
+<a href="http://cdn.zjhwork.xyz/vsfileserver/2105101327699901183.mp4" target="_blank">敲击演示</a>
 ### jar包地址
 <a href="http://cdn.zjhwork.xyz/vsfileserver/2105101322701963714.jar" target="_blank">点击下载v3.0</a>
