@@ -6,7 +6,7 @@
 ### 描述
 监听输入指令，显示到黑幕上，通过每次键盘的press 和 release 将按下和释放的按键从容器中插入取出，并且每次遍历容器进行显示。
 ### 效果图
-<a href='http://cdn.zjhwork.xyz/vsfileserver/2105091739422236859.png' target="_blank"><img src='http://cdn.zjhwork.xyz/vsfileserver/2105091739422236859.png'></a>
+<a href='http://cdn.zjhwork.xyz/vsfileserver/2105101336764087694.png' target="_blank"><img src='http://cdn.zjhwork.xyz/vsfileserver/2105101336764087694.png'></a>
 ### jar包地址
 <a href="http://cdn.zjhwork.xyz/vsfileserver/2105101322341834266.jar" target="_blank">点击下载v1.0</a>
 ## v2.0 
